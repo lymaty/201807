@@ -1,0 +1,70 @@
+window可选择显示类型project或working-set
+package-
+20180711定义类和构造方法、方法重载
+//在java里一切皆对象，做任何操作的时候都会涉及对象；想有对象就要先有类。
+//类具有相同属性和行为的一类事物---我们在java里可以把他抽象成一个类。
+//只需把学生的特征定义出来（以属性表示），可随时调用。
+//public :成员变量，可直接调用，不可检验。
+//private：属性私有化，
+private String sno;
+//设置属性值的方法---方法公开化。
+//方法的定义，形式参数；
+public void setSno(String sno){
+    //就近原则，
+    //局部变量sno
+    //用this来区分局部变量和属性
+    this.sno=sno;
+}
+//获取属性的值
+public String getSno(){
+      return sno;
+}
+//再调用方法时需要传入方法的指定的数据类型的值---实际参数即实参
+//同项目不同包可以用import引用类
+//具体指定一个学生-具体到某一个学生--
+//构造方法：在一个类里默认有一个无参构造方法，若在类里定义了其他构造方法则默认的失效。
+public Student(){}
+//构造方法可用来给属性赋值的
+public Student(String sno){}
+//方法重载：方法名相同，参数列表不同---在同一个类中
+public void a(){}
+public void a(int sno){}
+//方法重载的几种形式
+1）参数个数不同
+2）参数类型不同
+3）参数顺序不同
+//两种给属性赋值的方法1）构造方法2）set方法
+20180711--对象
+//类型 引用对象（存放的对象地址）=创建的对象；
+
+20180710作业讲解
+//java通配符--Java.util.*;
+在Java里方法之间是平级关系，方法不能套方法，但可调用
+//随机数类
+Random rand=new Random();
+int b=rand.nextInt();//范围0--（值-1）
+//随机数Random与输入值Scanner比较大小
+//异常1）数组下标越界:for(int a=0；a<=arr.length;a++){}
+异常2）main方法越界，
+//增强for循环,arr是数组，int是数组里面放的数据类型。i是循环时的当前内容。（0，1，2，3，4，，5，6）
+for(int i : arr){}
+//数组是引用数据类型，类型 引用对象（存放等式右边对象的地址）。arr记录数组存放位置。
+int[] arr =new int[9];
+20180712
+//Java特性 封装、继承、多态；
+1）继承：extends,子类继承父类的属性。继承相当于二次封装。单根继承，父类可有多个子类，但一个子类只能继承一个父类，
+//我们在Java里只要见一个类就是在继承，---Java默认一个顶级父类object,只要不在子类名后通过extends明确指定继承某个父类，则默认子类继承object。
+//toString ：将数值转化成字符串。
+Student stu=new Student();
+System.out.println(stu);//默认toString方法，toString方法指输出地址
+输出：com.neuedu.c.Student@15db9742--stu地址，com.neuedu.c.Student为类Student的全路径，@15db9742为stu的地址。
+super ：子类调用父类的方法
+//在父类只定义某个功能的方法，而不对其具体实线设置。
+在子类中对该功能方法进行重写，方法重写（发生在父类和子类之间）
+@Override---重写方法
+// abstract关键字--抽象父类中的抽象方法强制出现在子类中应用。
+//将类定义为抽象类。抽象方法只能存在于抽象类中，抽象类中不一定有抽象方法。
+public abstract class Student(){
+//只有方法的定义，没有方法体为抽象方法。
+public abstract run();
+}
