@@ -1,9 +1,6 @@
 package bao.java.chuxue;
-
 import java.util.*;
-
 import bao.java.tongyonglei.*;
-
 public class Text180711 {
 	 
 	public static void main(String[] args) {
@@ -41,22 +38,27 @@ public class Text180711 {
 		//给定一个数组，要求写一个expand 函数，把原有数组的长度扩容一倍，并保留原有数组原有的内容
 		Random arr=new Random();
 		int[] b=new int[10];
-		
 		//获得一个随机数组b
 		for(int i=0;i<b.length;i++){
 			b[i]=arr.nextInt(100);	
 		}
 		for(int s:b){System.out.print(s+",");}
-		
-		for(int j=0;j<b.length;j++){
-			
-			b[j]=arr.nextInt(100);	
-		}
-
+		System.out.println();
+		b=getExpand(b);
+		for(int m:b){System.out.print(m+",");}	
 	}
-	public void getExpand(int[] c){
+	//扩展数组,并对新数组赋值
+	public static int[] getExpand (int[] c){
 		int[] temp=new int[c.length*2];
-		//b.length=2*n;
+		for(int j=0;j<temp.length;j++){
+			for(int i=0;i<c.length;i++){
+				if(i==j){
+					temp[j]=c[i];
+				}
+				
+			}			
+		}
+		return temp;
 		
 	}
 	

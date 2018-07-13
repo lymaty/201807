@@ -5,14 +5,14 @@ package-
 //类具有相同属性和行为的一类事物---我们在java里可以把他抽象成一个类。
 //只需把学生的特征定义出来（以属性表示），可随时调用。
 //public :成员变量，可直接调用，不可检验。
-//private：属性私有化，
+//private：属性私有化，仅当前类有效。
 private String sno;
 //设置属性值的方法---方法公开化。
 //方法的定义，形式参数；
 public void setSno(String sno){
-    //就近原则，
+    //就近原则，就近寻找变量
     //局部变量sno
-    //用this来区分局部变量和属性
+    //用this来区分局部变量和属性，this.name指向该类的属性
     this.sno=sno;
 }
 //获取属性的值
@@ -50,9 +50,11 @@ int b=rand.nextInt();//范围0--（值-1）
 for(int i : arr){}
 //数组是引用数据类型，类型 引用对象（存放等式右边对象的地址）。arr记录数组存放位置。
 int[] arr =new int[9];
+Student[] arr=new Student[4]; 
 20180712
 //Java特性 封装、继承、多态；
-1）继承：extends,子类继承父类的属性。继承相当于二次封装。单根继承，父类可有多个子类，但一个子类只能继承一个父类，
+1）继承：extends关键字,子类继承父类的属性。继承相当于二次封装。单根继承，父类可有多个子类，但一个子类只能继承一个父类，
+public class 子类 extends父类
 //我们在Java里只要见一个类就是在继承，---Java默认一个顶级父类object,只要不在子类名后通过extends明确指定继承某个父类，则默认子类继承object。
 //toString ：将数值转化成字符串。
 Student stu=new Student();
@@ -66,5 +68,6 @@ super ：子类调用父类的方法
 //将类定义为抽象类。抽象方法只能存在于抽象类中，抽象类中不一定有抽象方法。
 public abstract class Student(){
 //只有方法的定义，没有方法体为抽象方法。
-public abstract run();
+public abstract void run();
 }
+20180713

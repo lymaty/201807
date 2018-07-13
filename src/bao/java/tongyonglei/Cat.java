@@ -13,6 +13,7 @@ public class Cat extends Pet{
 	public String getType(){
 		return type;
 	}*/
+	public Cat(){}
 	public Cat(String type, int age,String color){
 		super(type,age,color);
 	}

@@ -1,13 +1,28 @@
 package bao.java.chuxue;
 
-import java.util.Random;
-import java.util.Scanner;
-
+import java.util.*;
 import javax.swing.plaf.synth.SynthStyle;
-
-import bao.java.tongyonglei.Staff;
-
+import bao.java.tongyonglei.*;
 public class text180710 {
+	//动态输入一位数组a[7]，并返回数组a
+	public int[] input(){
+		int[] a=new int[7];
+		for(int i=0;i<a.length;i++){
+			System.out.println("请输入第"+(i+1)+"个数");
+			Scanner arr=new Scanner(System.in);
+			a[i]=arr.nextInt();
+		}
+		return a;
+	}
+	//按照a[i]数值输出*的个数
+	public void print(int[] a ){
+		for(int i=0;i<a.length;i++){
+			for(int j=0;j<=a[i];j++){
+				System.out.print("*");
+			}
+			System.out.println();
+		}
+	}
 	public static void main(String[] args) {
 		//1）读取7个数（1—50）的整数值，每读取一个值，程序打印出该值个数的＊。
 		/*int i=0,a,n;
@@ -24,18 +39,22 @@ public class text180710 {
 				}else{System.out.println("请输入1到50内的数字");}
 			i++;
 		}*/
+		//方法2
+		text180710 t=new text180710();//创建对象
+		int[] b=t.input();//调用input()方法
+		t.print(b);//调用print（）方法
+		
 		//2）判断一个年份是平年还是闰年,1)
-		/*Scanner input=new Scanner(System.in);
+		Scanner input=new Scanner(System.in);
 		int i=0,j=0;
-		while(true){
-			
+		while(true){		
 			int a=input.nextInt();
 			if(i<10&&j<10){
-				if(a%4==0){System.out.println(a+"是闰年");i++;}
+				if(a%4==0&&a%100!=0||a%400==0){System.out.println(a+"是闰年");i++;}
 				else{System.out.println(a+"是平年");j++;}
 			}else{break;}
 		}
-		System.out.println(i+"个闰年"+j+"个平年");*/
+		System.out.println(i+"个闰年"+j+"个平年");
 		//3）在控制台输入值 判断值的大小
 		/*Scanner input=new Scanner(System.in);
 		int i=0,j=0,k=0,n=0;
