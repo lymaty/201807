@@ -3,8 +3,9 @@ package bao.java.tongyonglei;
 	//1）通过构造方法给和set给属性赋值 
 	//2）打印输出猫的所有信息
 public class Cat extends Pet{
-	/*private String type;
-	private int age;
+	private String name;
+	private int food;
+	/*private int age;
 	private String color;
 	
 	public void seType(String type){
@@ -13,9 +14,32 @@ public class Cat extends Pet{
 	public String getType(){
 		return type;
 	}*/
-	public Cat(){}
-	public Cat(String type, int age,String color){
-		super(type,age,color);
+	public Cat(){
+		super();
+	}
+	public Cat(int food){
+		this.food=food;
+	}
+	public Cat(int food,String name){
+		this(food);
+		this.name=name;
+	}
+	@Override
+	public void getSound(){
+		System.out.println("miaomaio");
+		
+	};
+	/**
+	 * @return the name
+	 */
+	public String getName() {
+		return name;
+	}
+	/**
+	 * @param name the name to set
+	 */
+	public void setName(String name) {
+		this.name = name;
 	}
 	public String toString(){
 		return "品类是"+super.getType()+"，年龄是"+super.getAge()+"，颜色是"+super.getColor();

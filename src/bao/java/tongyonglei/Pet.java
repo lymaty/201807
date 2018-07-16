@@ -6,8 +6,10 @@ public abstract class Pet {
 	private String color;
 	
 	public Pet(){
+		super();
 	}
 	public Pet(String type,int age,String color){
+		this.type=type;
 		this.age=age;
 		this.color=color;	
 	}
@@ -29,8 +31,5 @@ public abstract class Pet {
 	public void setColor(String color) {
 		this.color = color;
 	}
-	public String getSound(){
-		return "е§дкНа";
-	}
-
+	public abstract void getSound();
 }

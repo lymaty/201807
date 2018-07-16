@@ -50,7 +50,7 @@ public class Text20180712 {
 		//4、构造方法与重载，创建一个类，为该类定义三个构造函数，分别执行下列操作：
 		//1)传递两个整数值并找出其中较大的一个值 ，2）传递三个double值并求出其乘积，3）在main方法中测试构造函数的调用。
 		
-		Random rand=new Random();
+		/*Random rand=new Random();
 		int value1=rand.nextInt(20);
 		int value2=rand.nextInt(20);	
 		Count c=new Count(value1,value2);
@@ -60,7 +60,7 @@ public class Text20180712 {
 		double j=input.nextDouble();
 		double k=input.nextDouble();
 		Count a=new Count(i,j,k);
-		a.Product();
+		a.Product();*/
 		
 		//5、定义一个学生类 属性包括学号int， 姓名string, 年龄int, 身高double, 体重double, 成绩double  
 		//1)通过构造方法或者set方法给属性赋值
@@ -69,12 +69,20 @@ public class Text20180712 {
 		//4)在main方法中进行测试 测试时 创建三个学生类的对象 把他们放到一个数组中并查看每个对象的详细信息和考试成绩.
 		/*Student a=new Student(20180626,"李芳",18,165,50.5,592.5);
 		a.studentExam();
-		System.out.println(a);
-		Student[] stu=new Student[3];
-		stu[0]=new Student(20180627,"林渊",19,180,65,570);
-		stu[1]=new Student(20180601,"深白",17,170,55,740);
-		stu[2]=new Student(20180627,"深蓝",18,185,64,600);
-		for(Student s:stu){System.out.println(s);}*/
+		System.out.println(a);*/
+		Student stu1=new Student();
+		Student stu2=new Student();
+		Student stu3=new Student();
+		stu1.setSage(12);
+		stu2.setSgrade(567);
+		stu3.setSname("ewde");
+		Student[] stu=new Student[]{stu1,stu2,stu3};//创建数组对象stu[]。
+		
+		System.out.println(stu[0].getSage()+stu[1].getSgrade()+stu[2].getSname());
+				/*new Student(20180627,"林渊",19,180,65,570);*/
+		/*stu[1]=new Student(20180601,"深白",17,170,55,740);
+		stu[2]=new Student(20180627,"深蓝",18,185,64,600);*/
+		for(Student s:stu){System.out.println(s);}
 		//6、 定义一个图形类 
 		//1)有计算面积和计算周长的抽象方法
 		//2)创建图形类的子类 圆形 长方形 正方形 分别定义自己的计算面积和计算周长

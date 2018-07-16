@@ -1,19 +1,23 @@
 package bao.java.chuxue;
 import java.util.*;
-
-import bao.java.tongyonglei.Cat;
-import bao.java.tongyonglei.Pet;
-import bao.java.tongyonglei.Student;
+import bao.java.tongyonglei.*;
 public class Firstclasses {
 	/**
 	 * @param args
-	 *///所有待执行语句应写入main方法中
+	 */
+	public static void test(Pet p){
+		
+	}
+	//所有待执行语句应写入main方法中
 	public static void main(String[] args){
+		Pet p1=new Cat();
+		Pet p2=new Dog();
+		
 		//180712--继承
-		Cat jiafei=new Cat("加菲猫类",8,"黄白条纹");
-		/*jiafei.setType("加菲猫类");*/
-	/*	jiafei.print();*/
-		System.out.println(jiafei);
+		/*Cat jiafei=new Cat("加菲猫类",8,"黄白条纹");
+		jiafei.setType("加菲猫类");
+	jiafei.print();
+		System.out.println(jiafei);*/
 		
 		//acsii表
 		/*char a='z';
