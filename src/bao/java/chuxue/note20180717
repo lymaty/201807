@@ -1,0 +1,43 @@
+20180717-多态
+1、类--特征-属性/private，行为-方法public；
+2、继承：子类 extends 父类。发生继承关系，成为一种身份，从而可以做什么。
+强制子类重写方法，abstract void,
+//通用方法--小大的工具类-ststic
+
+final--只读，一旦定义就不可修改。
+1.1.final 可以修饰类，但不可被继承。public final class Test(){};
+1.2.使用final修饰成员变量/局部变量/属性必须初始化。且定义后不可修改。
+1.3.使用 final修饰的方法不能被重写。
+1.4.static final 组合使用定义出一个常量，命名规则常用大写。
+public static final int A=8;
+或：public static final int B;
+statuc{B=10;}
+static{}静态代码块，在类加载时优先分配内存，只加载一次。
+类执行时，构造方法与静态代码块的优先顺序、子类与父类的优先顺序，及static是否只加载一次。
+输出结果：先执行顺序：父类静态代码块>子类静态代码块(将类加载到内存)>父类非静态代码块>子类非静态代码块>父类构造方法>子类构造方法>对象2父类构造方法>对象2子类构造方法。
+public class Workers extends Person()(//将类加载到内存){Worker a1=new Worker();worker a2=new worker();}
+{System.out.println("非静态代码块");}在构造方法执行前执行，而且每次创建对象都会执行一次。
+
+向下转型时，会出现类型强制转化的异常，Exception in thread "main"java.lang.ClassCastException
+//判断测试对象是不是属于某个类，instanceof//关键字
+Worker worker1=new Worker();
+Person p=worker1;
+if (p instanceof Worker){System.out.println((Worker)p);syso("强制转换成功");}
+else{syso("转换失败")}
+/接口interface--解耦和/可扩展性，由于属性为常量，可不被子类继承。
+接口 interface,创建接口的方式，class文件可之间更改关键字。public interface Method(){}
+在接口中不管定义什么类型的变量，都是默认的public static final修饰的常量。
+在接口中定义方法时，默认public abstract 的方法,无方法体。即public abstract void a (); 
+类与接口之间关系---implements，实现解决了不能多继承的缺点，接口可已多实现。多个接口之间用,隔开。
+public class Test implements Method,A{}
+接口与接口之间是继承。
+接口定义一个行为规范（做什么）--通过实现类（怎么做）
+
+应用： c                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         
+定义一个电脑类
+属性：mainbord,cpu,
+//cpu 和主板 链接在一起的现象叫耦合，解决耦合现象，实现低耦合。而且还有扩展性
+
+
+
+

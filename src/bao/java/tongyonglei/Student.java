@@ -6,8 +6,17 @@ public class Student {
 	//2)在类中定义一个考试的方法 方法中输出"姓名"考试成绩为“成绩”
 	//3)重写一下toString（） 在方法中输出学生的全部信息 姓名为“”年龄为“”身高是。。。。。。
 	//4)在main方法中进行测试 测试时 创建三个学生类的对象 把他们放到一个数组中并查看每个对象的详细信息和考试成绩.
-	
-	
+	private int sno;
+	private String sname;
+	private int sage;
+	private double sheight;
+	private double sweight;
+	private double sgrade;
+	@Override
+	public String toString() {
+		// TODO Auto-generated method stub
+		return this.sno+this.sname;
+	}
 	public int getSno() {
 		return sno;
 	}
@@ -44,12 +53,6 @@ public class Student {
 	public void setSgrade(double sgrade) {
 		this.sgrade = sgrade;
 	}
-	private int sno;
-	private String sname;
-	private int sage;
-	private double sheight;
-	private double sweight;
-	private double sgrade;
 	
 	/*public void setSno(int sno){//定义公有设置学号的方法setSno，该方法的形参为int类型的sno。
 		this.sno=sno;//将形参sno1获得的值赋值给属性sno

@@ -4,15 +4,14 @@ import bao.java.tongyonglei.*;
 public class Firstclasses {
 	/**
 	 * @param args
-	 */
-	public static void test(Pet p){
-		
-	}
+	 */	
 	//所有待执行语句应写入main方法中
+	public static void test(Pet p){p.getSound();}
 	public static void main(String[] args){
-		Pet p1=new Cat();
-		Pet p2=new Dog();
 		
+		/*Pet p1=new Cat();
+		Pet p2=new Dog();
+		test(p1);*/
 		//180712--继承
 		/*Cat jiafei=new Cat("加菲猫类",8,"黄白条纹");
 		jiafei.setType("加菲猫类");
@@ -145,5 +144,5 @@ public class Firstclasses {
 		
 		
 	}
-
 }
+

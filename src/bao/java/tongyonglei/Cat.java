@@ -26,7 +26,7 @@ public class Cat extends Pet{
 	}
 	@Override
 	public void getSound(){
-		System.out.println("miaomaio");
+		System.out.println(this.getType()+"miaomaio");
 		
 	};
 	/**

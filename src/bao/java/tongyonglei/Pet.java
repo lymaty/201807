@@ -4,9 +4,15 @@ public abstract class Pet {
 	private String type;
 	private int age;
 	private String color;
-	
+	static{
+		System.out.println("Pet静态代码块");
+	}
+	{
+		System.out.println("Pet非静态代码块");
+	}
 	public Pet(){
 		super();
+		System.out.println("Pet构造方法");
 	}
 	public Pet(String type,int age,String color){
 		this.type=type;

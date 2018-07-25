@@ -1,10 +1,14 @@
-package bao.java.chuxue;
+package bao.java.test;
 import java.util.*;
 
+import bao.java.chuxue.Firstclasses;
 import bao.java.graph.*;
 import bao.java.tongyonglei.*;
 public class Text20180712 {
 	public static void main(String[] args) {
+		Pet p1=new Cat();
+		Pet p2=new Dog();
+		Firstclasses.test(p2);
 	    //1、编写程序，用一个for循环计算 1+3+5+7…+99的值，并输出计算结果。
 		/*int a,sum=0;
 		for(a=1;a<=100;a+=2){
@@ -74,15 +78,17 @@ public class Text20180712 {
 		Student stu2=new Student();
 		Student stu3=new Student();
 		stu1.setSage(12);
+		stu1.setSname("d");
 		stu2.setSgrade(567);
 		stu3.setSname("ewde");
 		Student[] stu=new Student[]{stu1,stu2,stu3};//创建数组对象stu[]。
-		
-		System.out.println(stu[0].getSage()+stu[1].getSgrade()+stu[2].getSname());
-				/*new Student(20180627,"林渊",19,180,65,570);*/
+		for(Student m :stu ){System.out.println(m);}
+		System.out.println(stu1);
+		/*System.out.println(stu[0].getSage()+stu[1].getSgrade()+stu[2].getSname());
+				new Student(20180627,"林渊",19,180,65,570);*/
 		/*stu[1]=new Student(20180601,"深白",17,170,55,740);
 		stu[2]=new Student(20180627,"深蓝",18,185,64,600);*/
-		for(Student s:stu){System.out.println(s);}
+		/*for(Student s:stu){System.out.println(s);}*/
 		//6、 定义一个图形类 
 		//1)有计算面积和计算周长的抽象方法
 		//2)创建图形类的子类 圆形 长方形 正方形 分别定义自己的计算面积和计算周长

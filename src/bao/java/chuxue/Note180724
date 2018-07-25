@@ -1,0 +1,49 @@
+map接口 --在map集合中不能出现相同的key，后定义的会把原有key的值覆盖。
+map(k,v);//k--key,v--value.key不可重复，但可为Null。
+map.put(k,v)//放入一个键值对；
+map.get(k);//通过键取值
+map.containsKey(k);//判断是否包含某个键
+map.remove(k);//移除并返回某个键上的值，
+//查看
+Set<integer> integer =map.keyset();
+//
+map.values();
+//
+map.entrySet();
+
+
+//java.lang.NullPointer.Exception.
+int a=null;
+system.out.println(a.length());//null不能调方法，会报错
+Hashmap
+过时的类，里面的方法在Hashmap类的方法基础上，添加了
+Hashtable
+
+//file--java.io
+File file=new File(pathname);//通过路径查找指定文件，
+file.exists()//文件是否存在
+file.getAbsoluetePath()//返回路径
+file.isDirectory()//判断是否是目录/文件夹；
+file.getName()//获取文件名
+file.isFile()//判断是否为文件,(可区分文件与文件夹)
+//对文件读写权限的查看/判断
+file.canRead()
+file.canWrite()
+file.setReadOnly()//对文件的属性进行操作（设置权限）
+/在Java程序里，读取硬盘上的文件到Java程序中--IO流inputStream/outputStream;
+//在Java中和硬盘上的文件建立一个通道
+InputStream io1=new FileInputStream(file1);//inputStream为抽象类，调用子类，file1为目标路径。
+io1.read();
+OutputStream io2=new FileOutputStream(file2);//file2为书写目标路径
+io2.write();
+
+IO流--分类
+1）读取与输出，分为输入流和输出流；
+2）读取的是字节还是字S符，分为字节流和字符流。只有字节流和字符流能传输的，字节流传输较快，字符流识别较快。
+/读取文件时，若读取内容含中文，可用字符流读取，可防止出现乱码；
+读取图片、压缩包，可用字节流，效率较高，以字节存放。
+
+Reader read= new FileReader(file,ture);
+char[] a=new char[(int)file.length()];
+read.reader(a);
+read.close;

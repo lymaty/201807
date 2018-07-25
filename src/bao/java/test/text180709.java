@@ -1,4 +1,4 @@
-package bao.java.chuxue;
+package bao.java.test;
 import java.util.*;
 import java.lang.*;
 public class text180709 {

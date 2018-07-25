@@ -1,0 +1,48 @@
+//IO流--字节流和字符流
+		//输入流和输出流
+		//字节流
+		//--InputStream子类（FileInputStream）
+		//--OutputSteam子类（FileOutStream）
+		//覆盖，如果把新内容拼接加一个标识true/flase，append
+		//字符流
+		//--Reader 子类FileReader
+		//--Writer 子类FileWriter
+		//覆盖同上
+		//使用流资源结束需关闭
+		//
+		/*File file =new File("D:\\");//引起转译--/
+		try {
+			Reader read=new FileReader(file);
+			char[] cb=new char[(int)file.length()];
+			read.read(cb);
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}*/
+		//输入流：
+		//字符流-缓存--实现按行读取文件，按照回车键读取。
+		//BufferedReader,读取有换行的文件，。
+		//readline();--按行读取，按照回车键读取
+		//字节流--实现按行读取。
+		//InputSream
+		//IputStreamReader--将输入字节流转换为字符流的转换器.
+		//输出流：
+		//outputStream
+		//OutputStreamWriter--将输出字节流转换为字符流的转换器.
+	    //PrintWriter--按行输出按照回车键输出
+		//.flush()--刷新
+		
+		
+		//编写对象文件，将对象写入硬盘，持久化存储
+		//--Student stu=new Student();
+		//Flie
+		//ObjectOutputStream--写对象。
+		//只有字节流和字符流可以传输写出。写出对象时是对象流，必须将对象流转换为字节流。--序列化Serializable
+		//Student implement Serializable(标记接口)
+		//--添加序列化ID（唯一）
+		//读取
+		//ObjectInputStream

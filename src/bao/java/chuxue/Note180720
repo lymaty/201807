@@ -1,0 +1,99 @@
+复习
+1、声明变量： 格式：数据类型 变量名；要求变量初始化。常量。
+2、数据类型：基本数据类型、引用数据类型。为什么有多种数据类型？--为合理利用内存空间
+(1)基本数据类型：byte\short\int\long\boolean\char\double\float;
+(2)引用数据类型：类 类型\接口 类型\数组类型。new可创建引用数据类型的对象。在引用数据类型中有默认的初始值。
+3、数组：存放一组相同类型的数据。int[] a=new int[];int[] b={};
+在数组类型中，有默认的初始值，初始值根据存放的数据类型的默认初始值确定。
+a.length;数组的length属性查找数组长度，根据下标取值，从0开始。
+冒泡排序/其他排序方法？
+缺点：不能动态扩容。抛出运行时异常：数组下标越界。
+弥补缺点：出现集合Arrylist。
+4、类--是一个抽象的概念，根据事物的特征总结出来反应到Java代码上，从具体事务到抽象概念的过程。
+对象--有了类，对应相应操作，从抽象到某一个具体。
+具有相同或相似性质的对象的抽象就是类。因此，对象的抽象是类，类的具体化就是对象，也可以说类的实例是对象。
+类具有操作，它是对象的行为的抽象，用操作名和实现该操作的方法来描述。
+
+this区分属性和变量；this.
+
+继承
+抽象类：用abstract修饰的类
+
+
+向下转型--classCastException 在
+抽象类 abstract，构造方法、static{}、属性等
+接口
+定义接口 interface（编译后class文件），包括常量、抽象方法；
+在interface中void add();默认为public。
+//jdk1.8之后出现了default关键字，可以在接口中些方法体，接口的子类可以有选择的重写接口中的方法。
+在接口中定义方法：public default void add(){};
+
+通过电脑cpu和mainbord--多态和解耦和（接口）
+赋值多态：赋值放过程；
+传参多态：作为参数传递赋值。
+
+在JAVA在由Java自己定义的类，供大家使用。即API手册--java
+自己写类：1、自己把类定义好-属性/方法2、创建类的对象3、调用类中的方法，实现某种功能。
+java提供的具有通用功能的类，只使用不可修改1、创建类的对象2、调用类中的方法实现某种功能。
+
+String 字符串，可创建对象static，类中有静态方法。
+1、new对象.2、直接通过类名。
+.toCharArry()；
++:占用内存，不能释放不需要变量的内存。//jidk1.7?之后与append相同
+//
+StingBuilder:append()拼接，可释放内存
+StringBuffer（线程安全）:
+基本数据类型的包装类--8种基本数据类型--引用类
+装箱：int转换成integer;  
+拆箱：integer转换成int;
+在Java里拆箱和装箱是自动进行的。    
+Integer有一个数据常量池，长度1byte，8bit，-128~127;-2^7~2^7-1;                                                                                                                           
+
+//比较==
+==比较等式两边的地址
+equals()比较内容
+/拿数据的动作-手动拆箱
+int a =i.intValue();//手动拆箱
+int k=j;
+Integer.parseInt("1214");//字符串转换成整型，被转换的字符串必须是数字格式的。
+//
+Date() 日期和时间时，可使用这个类，
+指定时间的格式SImpleDateFormat 格式化达特format();
+Arrys 数组的操作类，常用方法1、sort()从小到大排序；2、copyOf()扩展数组，保留原来数组的内容，并复制原来数组。
+private Arrys();//Java规定arrys构造方法是私有的，不可直接创建对象，再调用方法只能通过类名.方法名();方式调用静态方法。
+sort();方法：用来对数组进行从小到大的排序。
+int[] a={1,2,55,6,4,88,99};
+Arrays.sort(a);//对数组进行从小到大的排序。
+int[] b=Arrays.copyOf(a,22)//对数组进行扩容
+//
+集合 顶级接口Collection ，1、list 2、Set
+接口和接口的关系，接口和类，类和接口，
+list最常用的实现类，ArrayList的底层object[]，初始长度10，动态扩容Arrarrys.copyOf();
+扩容方式：动态扩容，在长度每当使用一半时就会扩容，扩容时调用Arrays.copyOf().(1、把原来数组内容复制到新数组2、指定新数组的长度。频繁扩容时会有时间的占有---提高效率的方式：在创建集合时指定一个较大的长度)
+<E>泛型，默认为object类型
+ArrayList<String数据类型> list=new ArrayList<>(数组长度);
+list.add(0,"b");//添加数据，在指定位置添加数据？
+list.size();//获取集合长度
+list.get(下标索引);
+list.isEmpty();
+list.remove();
+list.clear();
+list.contains();
+Objest obj=list.toArray();//转换为数组/？尝试强制转换为char[]
+list.set(0,"a");//添加数据，覆盖原有数据？
+
+LinkedList 双向链表
+LinkedList<String数据类型> llist=new LinkedList<>(数组长度);
+比较LinkedList和ArrayList区别:插入中间值时， LinkedList较快；获取中间值时，ArrayList较快。
+
+Vector类 :是object[]，list的类
+与ArrayList相似，区别是：Vector的方法添加了synchronized关键字-线程安全,(？已学的另一个线程安全的关键词是？线程安全是？)
+
+cmd
+javac 运行.java
+java 运行.class
+javap查看汇编语言
+
+
+
+

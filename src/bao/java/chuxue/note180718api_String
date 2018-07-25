@@ -1,0 +1,6 @@
+
+
+
+API--String
+String的底层是一个final修饰的char的数组。final只读不可修改。
+
