@@ -74,7 +74,7 @@ public class Text180724 {
 		}*/
 		//19. *（Map）设计Account对象如下：要求完善设计，使得该Account 对象能够自动分配id。 
 		//给定一个List 如下： 
-		/*List list = new ArrayList(); 
+		List list = new ArrayList(); 
 		list.add(new Account(10.00, "1234"));
 		list.add(new Account(15.00, "5678"));
 		list.add(new Account(0, "1010")); 
@@ -86,13 +86,14 @@ public class Text180724 {
 			Account account=(Account) list.get((int)(i-1));
 			account.setId(i);//将i赋值给ID，实现自动增长
 			map1.put(i, account);//将i和account放入map
+			System.out.println(map1.get(i));;
 		}
 		//将map放入set，遍历输出map的值。
 		Set<Long> set2=map1.keySet();
 		for (Long long1 : set2) {
 			System.out.println(long1);
 			System.out.println(map1.get(long1));
-		}*/
+		}
 		//利用io流实现将一个文件夹下的文件复制到里一个文件夹下 并以原来文件的名称命名。
 		//思路：用字符流读取和写出。1）创建目标文件对象，获取文件名，读文件内容放置到char[]数组中，将char[]写入指定位置文件。
 		File filefrom=new File("D:\\javacode\\java45.java");

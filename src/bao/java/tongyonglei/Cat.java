@@ -3,8 +3,8 @@ package bao.java.tongyonglei;
 	//1）通过构造方法给和set给属性赋值 
 	//2）打印输出猫的所有信息
 public class Cat extends Pet{
+	public String food;
 	private String name;
-	private int food;
 	/*private int age;
 	private String color;
 	
@@ -17,10 +17,10 @@ public class Cat extends Pet{
 	public Cat(){
 		super();
 	}
-	public Cat(int food){
+	public Cat(String food){
 		this.food=food;
 	}
-	public Cat(int food,String name){
+	public Cat(String food,String name){
 		this(food);
 		this.name=name;
 	}
