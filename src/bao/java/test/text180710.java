@@ -14,6 +14,15 @@ public class text180710 {
 		}
 		return a;
 	}
+	//三角形
+	public int[] input1(int n){
+		int[] a=new int[n];
+		for(int i=0;i<a.length;i++){
+		a[i]=i;
+		}
+		return a;
+		}
+
 	//按照a[i]数值输出*的个数
 	public void print(int[] a ){
 		for(int i=0;i<a.length;i++){
@@ -41,20 +50,26 @@ public class text180710 {
 		}*/
 		//方法2
 		text180710 t=new text180710();//创建对象
-		int[] b=t.input();//调用input()方法
-		t.print(b);//调用print（）方法
-		
-		//2）判断一个年份是平年还是闰年,1)
+		//int[] b=t.input();//调用input()方法
+		//t.print(b);//调用print（）方法
+		//输入三角形的高度
+		System.out.println("输入三角形的高度");
 		Scanner input=new Scanner(System.in);
+		int n=input.nextInt();
+		int[] a=t.input1(n);
+		t.print(a);
+
+		//2）判断一个年份是平年还是闰年,1)
+		/*Scanner input=new Scanner(System.in);
 		int i=0,j=0;
 		while(true){		
 			int a=input.nextInt();
 			if(i<10&&j<10){
-				if(a%4==0&&a%100!=0||a%400==0){System.out.println(a+"是闰年");i++;}
+				if((a%4==0&&a%100!=0)||a%400==0){System.out.println(a+"是闰年");i++;}
 				else{System.out.println(a+"是平年");j++;}
 			}else{break;}
 		}
-		System.out.println(i+"个闰年"+j+"个平年");
+		System.out.println(i+"个闰年"+j+"个平年");*/
 		//3）在控制台输入值 判断值的大小
 		/*Scanner input=new Scanner(System.in);
 		int i=0,j=0,k=0,n=0;
@@ -71,7 +86,7 @@ public class text180710 {
 		System.out.println("共输入"+n+"个小数,其中"+i+"个数是-1到0之间的小数，"+j+"个数是0到1之间的小数，"+k+"个数不是-1到1间的小数。");*/
 	   //随机输出Random
 		/*Random ran=new Random();
-	   int a=ran.nextInt(10);//输出值范围0-9
+	   int a=ran.nextInt(10);//输出值范围0-9,[0,10)
 	   Scanner input=new Scanner(System.in);//动态输入
 	   while(true){
 	   int b=input.nextInt();

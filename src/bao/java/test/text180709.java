@@ -87,17 +87,35 @@ public class text180709 {
 		}
 		System.out.println("1-100内偶数个数为"+i+","+"偶数和"+t+";"+"1-100内偶数个数为"+j+","+"奇数和"+s+"。");*/
 		/*6)一个5位数，判断它是不是回文数。即12321是回文数，个位与万位相同，十位与千位相同。*/
-		/*int a,b,c,d,e,m;
-		 Scanner input=new Scanner(System.in);
-		while(true){ m=input.nextInt();
+		//int a,b,c,d,e,m,i=0;
+		// Scanner input=new Scanner(System.in);
+		
+		//如果你希望生成任意值到任意值的随机数，公式就是这样的：
+		// max - 期望的最大值
+		// min - 期望的最小值 
+		//parseInt(Math.random()*(max-min+1)+min,10);
+		//Math.floor(Math.random()*(max-min+1)+min);
+		
+		//、生成[-3,15)区间的整数
+		//int n4 = r.nextInt(18) - 3;   【也就是 r.nextInt() * (n2-n1)+n1】 n1是个负数
+		//n4 = Math.abs(r.nextInt() % 18) - 3;    
+		
+		//m=(int)Math.round();
+		//System.out.println(m);
+		//Random r=new Random();
+		/*while(true){
+		//m=r.nextInt(90000) + 10000;
+		m=(int)(Math.random()*90000+10000);
+		// m=input.nextInt();
+		System.out.println(m);
 		 a=m/10000;//万位
 		 b=m%10000/1000;//千位
 		 c=m%1000/100;//百位
 		 d=m%100/10;//十位
 		 e=m%10;//个位
 		 if(a==e&&b==d){
-			 System.out.println(m+"是回文数");
+			 System.out.println(m+"是回文数");break;
 		 }else{System.out.println(m+"不是回文数");}}*/
-  
+        
 	}
 }

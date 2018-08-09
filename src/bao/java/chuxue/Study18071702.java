@@ -1,5 +1,9 @@
 package bao.java.chuxue;
 
-public class Study18071702 {
+import bao.java.test.text180709;
 
+public class Study18071702 {
+public static void main(String[] args) {
+	
+}
 }
